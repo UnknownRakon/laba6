@@ -12,8 +12,8 @@
       <div class="container">
             <div class="row mt-2 mx-auto">
               <div class="col-12">
-                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-                  <a class="navbar-brand">Меню</a>
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+                  <a href="#start" class="navbar-brand">Стек протоколов TCP/IP</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -23,49 +23,47 @@
                           <a class="nav-link" href="#history">История</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Структура стека</a>
+                          <a class="nav-link" href="#stek">Структура стека</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Краткая характеристика протоколов</a>
+                          <a class="nav-link" href="#protocol">Краткая характеристика основных протоколов</a>
                         </li>
                       </ul>
+                    </div>
+                    <div class="dropdown col col-lg-1 mr-3 mt-2">
+                      <button class="btn btn-secondary dropdown-toggle" width="20px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Вход
+                      </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                      <form class="px-4 py-3">
+                        <div class="form-group">
+                          <label for="exampleDropdownFormEmail1">Email</label>
+                          <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleDropdownFormPassword1">Пароль</label>
+                          <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                            <label class="form-check-label" for="dropdownCheck">
+                            Запомнить меня
+                            </label>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Войти</button>
+                      </form>
+                      <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Новенький? Зарегестрируйся!</a>
+                        <a class="dropdown-item" href="#">Забыл пароль?</a>
+                      </div>
                     </div>
                 </nav>
               </div>
           </div>
-          <div class="row mt-2 mx-auto">
-            <h1 class="text-left col">Стек протоколов TCP/IP</h1>
-              <div class="dropdown col col-lg-1 mr-3 mt-2">
-                <button class="btn btn-secondary dropdown-toggle" width="20px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Вход
-                </button>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                <form class="px-4 py-3">
-                  <div class="form-group">
-                    <label for="exampleDropdownFormEmail1">Email</label>
-                    <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleDropdownFormPassword1">Пароль</label>
-                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
-                  </div>
-                  <div class="form-group">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                      <label class="form-check-label" for="dropdownCheck">
-                      Заомнить меня
-                      </label>
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Войти</button>
-                </form>
-                <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Новенький? Зарегестрируйся!</a>
-                  <a class="dropdown-item" href="#">Забыл пароль?</a>
-                </div>
-              </div>
-          </div>  
-          <div class="row mt-2">
+          <a name="start"></a>
+          <div class="row mt-5 pt-5">
             <div class="col-12">
               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -75,13 +73,13 @@
                 </ol>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="img/darknet-3588402_1280.jpg" class="d-block w-100" alt="...">
+                    <img src="img/darknet-3588402_1280.jpg" class="d-block w-100" alt="darknet">
                   </div>
                   <div class="carousel-item">
-                    <img src="img/proxy-4605834_1280.jpg" class="d-block w-100" alt="...">
+                    <img src="img/proxy-4605834_1280.jpg" class="d-block w-100" alt="proxy">
                   </div>
                   <div class="carousel-item">
-                    <img src="img/proxy-4620557_1280.jpg" class="d-block w-100" alt="...">
+                    <img src="img/proxy-4620557_1280.jpg" class="d-block w-100" alt="proxy">
                   </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -95,40 +93,197 @@
               </div>
             </div>
           </div>
-          <div class="row mt-2">
-            <h2 class="text-center col-12"><a name="history"></a>История</h2>
-            <div class="col-11 mx-auto">
-              <p class="text-break">
-                Transmission Control Protocol/Internet Protocol (TCP/IP) - это промышленный стандарт стека протоколов, разработанный для глобальных сетей.
-              </p>
-              <p class="text-break">
-                Стандарты TCP/IP опубликованы в серии документов, названных Request for Comment (RFC). Документы RFC описывают внутреннюю работу сети Internet. Некоторые RFC описывают сетевые сервисы или протоколы и их реализацию, в то время как другие обобщают условия применения. Стандарты TCP/IP всегда публикуются в виде документов RFC, но не все RFC определяют стандарты.
-              </p>
-              <p class="text-break">
-                Стек был разработан по инициативе Министерства обороны США (Department of Defence, DoD) более 20 лет назад для связи экспериментальной сети ARPAnet с другими сателлитными сетями как набор общих протоколов для разнородной вычислительной среды. Сеть ARPA поддерживала разработчиков и исследователей в военных областях. В сети ARPA связь между двумя компьютерами осуществлялась с использованием протокола Internet Protocol (IP), который и по сей день является одним из основных в стеке TCP/IP и фигурирует в названии стека.
-              </p>
-              <p class="text-break">
-                Большой вклад в развитие стека TCP/IP внес университет Беркли, реализовав протоколы стека в своей версии ОС UNIX. Широкое распространение ОС UNIX привело и к широкому распространению протокола IP и других протоколов стека. На этом же стеке работает всемирная информационная сеть Internet, чье подразделение Internet Engineering Task Force (IETF) вносит основной вклад в совершенствование стандартов стека, публикуемых в форме спецификаций RFC.
-              </p>
-              <p class="text-break">
-
-              </p>
-              <p class="text-break">
-                Итак, лидирующая роль стека TCP/IP объясняется следующими его свойствами:
-              </p>
-              <ul class="list-group">
-                <li class="list-group-item">Это наиболее завершенный стандартный и в то же время популярный стек сетевых протоколов, имеющий многолетнюю историю.</li>
-                <li class="list-group-item">Почти все большие сети передают основную часть своего трафика с помощью протокола TCP/IP.</li>
-                <li class="list-group-item">Это метод получения доступа к сети Internet.</li>
-                <li class="list-group-item">Этот стек служит основой для создания intranet- корпоративной сети, использующей транспортные услуги Internet и гипертекстовую технологию WWW, разработанную в Interne</li>
-                <li class="list-group-item"></li>
-                <li class="list-group-item"></li>
-                <li class="list-group-item"></li>
-                <li class="list-group-item"></li>
-                <li class="list-group-item"></li>
-              </ul>
+          <section>
+            <div class="row mt-2">
+              <h2 class="text-center col-12 mb-2"><a name="history" class="d-block mb-5 pb-2"></a>История</h2>
+              <div class="col-11 mx-auto">
+                <div class="media">
+                  <img src="img/business_case_1.jpg" class="align-self-start mr-3 img-thumbnail" alt="case" width="20%">
+                  <div class="media-body">
+                    <p class="text-break">
+                      Transmission Control Protocol/Internet Protocol (TCP/IP) - это промышленный стандарт стека протоколов, разработанный для глобальных сетей.
+                    </p>
+                    <p class="text-break">
+                      Стандарты TCP/IP опубликованы в серии документов, названных Request for Comment (RFC). Документы RFC описывают внутреннюю работу сети Internet. Некоторые RFC описывают сетевые сервисы или протоколы и их реализацию, в то время как другие обобщают условия применения. Стандарты TCP/IP всегда публикуются в виде документов RFC, но не все RFC определяют стандарты.
+                    </p>
+                  </div>
+                </div>
+                <figure class="figure mt-2">
+                  <img src="img/department.png" class="figure-img img-fluid rounded mx-auto d-block" alt="department" width="30%">
+                  <figcaption class="figure-caption text-center">Department of Defence, DoD</figcaption>
+                </figure>
+                <p class="text-break">
+                  Стек был разработан по инициативе Министерства обороны США (Department of Defence, DoD) более 20 лет назад для связи экспериментальной сети ARPAnet с другими сателлитными сетями как набор общих протоколов для разнородной вычислительной среды. Сеть ARPA поддерживала разработчиков и исследователей в военных областях. В сети ARPA связь между двумя компьютерами осуществлялась с использованием протокола Internet Protocol (IP), который и по сей день является одним из основных в стеке TCP/IP и фигурирует в названии стека.
+                </p>
+                <div class="media">
+                  <figure class="figure float-left col-3">
+                    <img src="img/berkley.png" class="figure-img img-fluid rounded d-block mx-auto" alt="berkley" width="80%">
+                    <figcaption class="figure-caption text-center">Университет Беркли</figcaption>
+                  </figure>
+                  <div class="media-body mt-3">
+                    <p class="text-break">
+                      Большой вклад в развитие стека TCP/IP внес университет Беркли, реализовав протоколы стека в своей версии ОС UNIX. Широкое распространение ОС UNIX привело и к широкому распространению протокола IP и других протоколов стека. На этом же стеке работает всемирная информационная сеть Internet, чье подразделение Internet Engineering Task Force (IETF) вносит основной вклад в совершенствование стандартов стека, публикуемых в форме спецификаций RFC.
+                    </p>
+                  </div>
+                </div>
+                <p class="text-break ">
+                  Итак, лидирующая роль стека TCP/IP объясняется следующими его свойствами:
+                </p>
+                <ul class="list-group">
+                  <li class="list-group-item">Это наиболее завершенный стандартный и в то же время популярный стек сетевых протоколов, имеющий многолетнюю историю.</li>
+                  <li class="list-group-item">Почти все большие сети передают основную часть своего трафика с помощью протокола TCP/IP.</li>
+                  <li class="list-group-item">Это метод получения доступа к сети Internet.</li>
+                  <li class="list-group-item">Этот стек служит основой для создания intranet- корпоративной сети, использующей транспортные услуги Internet и гипертекстовую технологию WWW, разработанную в Internet.</li>
+                  <li class="list-group-item">Все современные операционные системы поддерживают стек TCP/IP.</li>
+                  <li class="list-group-item">Это гибкая технология для соединения разнородных систем как на уровне транспортных подсистем, так и на уровне прикладных сервисов.</li>
+                  <li class="list-group-item">Это устойчивая масштабируемая межплатформенная среда для приложений клиент-сервер.</li>
+                </ul>
+              </div>
+              <button type="button" class="btn btn-primary mt-2 mx-auto col-3" data-toggle="modal" data-target="#exampleModal">
+                Источник
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Источник информации</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body text-center">
+                      <a href="https://www.opennet.ru/docs/RUS/ip_network/glava_2.html" class="text-break">https://www.opennet.ru/docs/RUS/ip_network/glava_2.html</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>        
+          </section>
+          <hr class="col-10 mx-auto">
+          <section>
+            <div class="row mt-2">
+              <h2 class="text-center col-12 mb-2"><a name="stek" class="d-block mb-5 pb-2"></a>Структура стека</h2>
+              <div class="col-11 mx-auto">
+                <p class="text-break">Сегодня стек TCP/IP широко используется как в глобальных, так и в локальных сетях. Этот стек имеет иерархическую структуру, в которой определено 4 уровня.</p>
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Уровень</th>
+                      <th scope="col">Протоколы</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Прикладной уровень</td>
+                      <td>FTP, Telnet, HTTP, SMTP,
+                         SNMP, TFTP</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Транспортный уровень</td>
+                      <td>TCP, UDP</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Сетевой уровень	</td>
+                      <td>IP, ICMP, RIP, OSPF</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Уровень сетевых интерфейсов</td>
+                      <td>He регламентируется</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="text-break">Прикладной уровень стека TCP/IP соответствует трем верхним уровням модели OSI: прикладному, представления и сеансовому. Он объединяет сервисы, предоставляемые системой пользовательским приложениям. За долгие годы применения в сетях различных стран и организаций стек TCP/IP накопил большое количество протоколов и служб прикладного уровня. К ним относятся такие распространенные протоколы, как протокол передачи файлов (File Transfer Protocol, FTP), протокол эмуляции терминала telnet, простой протокол передачи почты (Simple Mail Transfer Protocol, SMTP), протокол передачи гипертекста (Hypertext Transfer Protocol, HTTP) и многие другие. Протоколы прикладного уровня развертываются на хостах.</p>
+                <p class="text-break">Транспортный уровень стека TCP/IP может предоставлять вышележащему уровню два типа сервиса:</p>
+                <ul>
+                  <li>гарантированную доставку обеспечивает протокол управления передачей (Transmission Control Protocol, TCP);</li>
+                  <li>доставку по возможности, или с максимальными усилиями, обеспечивает протокол пользовательских дейтаграмм (User Datagram Protocol, UDP).</li>
+                </ul>
+                <p class="text-break">
+                  Для того чтобы обеспечить надежную доставку данных, протокол TCP предусматривает установление логического соединения, что позволяет ему нумеровать пакеты, подтверждать их прием квитанциями, в случае потери организовывать повторные передачи, распознавать и уничтожать дубликаты, доставлять прикладному уровню пакеты в том порядке, в котором они были отправлены. Благодаря этому протоколу объекты на хосте-отправителе и хосте-получателе могут поддерживать обмен данными в дуплексном режиме. TCP дает возможность без ошибок доставить сформированный на одном из компьютеров поток байтов на любой другой компьютер, входящий в составную сеть.
+                </p>
+                <p class="text-break">
+                  Второй протокол этого уровня, UDP, является простейшим дейтаграммным протоколом, который используется тогда, когда задача надежного обмена данными либо вообще не ставится, либо решается средствами более высокого уровня — прикладным уровнем или пользовательскими приложениями.
+                </p>
+                <p class="text-break">
+                  В функции протоколов TCP и UDP входит также исполнение роли связующего звена между прилегающими к транспортному уровню прикладным и сетевым уровнями. От прикладного протокола транспортный уровень принимает задание на передачу данных с тем или иным качеством прикладному уровню-получателю. Нижележащий сетевой уровень протоколы TCP и UDP рассматривают как своего рода инструмент, не очень надежный, но способный перемещать пакет в свободном и рискованном путешествии по составной сети.
+                </p>
+                <p class="text-break">
+                  Основным протоколом сетевого уровня является межсетевой протокол (Internet Protocol, IP). В его задачу входит продвижение пакета между сетями — от одного маршрутизатора к другому до тех пор, пока пакет не попадет в сеть назначения. В отличие от протоколов прикладного и транспортного уровней, протокол IP развертывается не только на хостах, но и на всех маршрутизаторах (шлюзах). Протокол IP — это дейтаграммный протокол, работающий без установления соединений по принципу доставки с максимальными усилиями. Такой тип сетевого сервиса называют также «ненадежным».
+                </p>
+                <p class="text-break">
+                  К сетевому уровню TCP/IP часто относят протоколы, выполняющие вспомогательные функции по отношению к IP. Это, прежде всего, протоколы маршрутизации RIP и OSPF, предназначенные для изучения топологии сети, определения маршрутов и составления таблиц маршрутизации, на основании которых протокол IP перемещает пакеты в нужном направлении. По этой же причине к сетевому уровню могут быть отнесены протокол межсетевых управляющих сообщений (Internet Control Message Protocol, ICMP), предназначенный для передачи маршрутизатором источнику сведений об ошибках, возникших при передаче пакета, и некоторые другие протоколы.
+                </p>
+                <p class="text-break">
+                  Идеологическим отличием архитектуры стека TCP/IP от многоуровневой архитектуры других стеков является интерпретация функций самого нижнего уровня — уровня сетевых интерфейсов.
+                </p>
+                <p class="text-break">
+                  Нижний уровень стека TCP/IP отвечает только за организацию взаимодействия с подсетями разных технологий, входящими в составную сеть. TCP/IP рассматривает любую подсеть, входящую в составную сеть, как средство транспортировки пакетов между двумя соседними маршрутизаторами.
+                </p>
+              </div>
+              <button type="button" class="btn btn-primary mt-2 mx-auto col-3" data-toggle="modal" data-target="#secondModal">
+                Источник
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="secondModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Источник информации</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body text-center">
+                      <a href="http://iptcp.net/stek-protokolov-tcpip.html" class="text-break">http://iptcp.net/stek-protokolov-tcpip.html</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section> 
+          <hr class="col-10 mx-auto">
+          <section>
+            <div class="row mt-2">
+              <h2 class="text-center col-12 mb-2"><a name="protocol" class="d-block mb-5 pb-2"></a>Красткая характеристика основных протоколов</h2>
+              <div class="col-11 mx-auto pt-3">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Специальный заголовок</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Специальный заголовок</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Специальный заголовок</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+              </div> 
+            </div>   
+          </section>       
         </div>  
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
