@@ -139,7 +139,7 @@
                   <li class="list-group-item">Это устойчивая масштабируемая межплатформенная среда для приложений клиент-сервер.</li>
                 </ul>
               </div>
-              <button type="button" class="btn btn-primary mt-2 mx-auto col-3" data-toggle="modal" data-target="#exampleModal">
+              <button type="button" class="btn btn-primary mt-2 mx-auto col-3 bg-success" data-toggle="modal" data-target="#exampleModal">
                 Источник
               </button>
               <!-- Modal -->
@@ -226,7 +226,7 @@
                   Нижний уровень стека TCP/IP отвечает только за организацию взаимодействия с подсетями разных технологий, входящими в составную сеть. TCP/IP рассматривает любую подсеть, входящую в составную сеть, как средство транспортировки пакетов между двумя соседними маршрутизаторами.
                 </p>
               </div>
-              <button type="button" class="btn btn-primary mt-2 mx-auto col-3" data-toggle="modal" data-target="#secondModal">
+              <button type="button" class="btn btn-primary mt-2 mx-auto col-3 bg-success" data-toggle="modal" data-target="#secondModal">
                 Источник
               </button>
               <!-- Modal -->
@@ -252,37 +252,141 @@
             <div class="row mt-2">
               <h2 class="text-center col-12 mb-2"><a name="protocol" class="d-block mb-5 pb-2"></a>Красткая характеристика основных протоколов</h2>
               <div class="col-11 mx-auto pt-3">
-                <div class="row">
+                <div class="row mx-auto">
                   <div class="col-sm-4">
-                    <div class="card">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="img/ftp.jpg" alt="Card image cap">
                       <div class="card-body">
-                        <h5 class="card-title">Специальный заголовок</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+                        <button type="button" class="btn btn-primary  mx-auto d-block col-10" data-toggle="modal" data-target="#ftp">
+                          FTP
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="ftp" tabindex="-1" role="dialog" aria-labelledby="FTP" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="ftp">FTP (File Transfer Protocol)</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <p>
+                                  Протокол пересылки файлов FTP (File Transfer Protocol) реализует удаленный доступ к файлу. Для того, чтобы обеспечить надежную передачу, FTP использует в качестве транспорта протокол с установлением соединений - TCP. Кроме пересылки файлов протокол FTP предлагает и другие услуги. Так, пользователю предоставляется возможность интерактивной работы с удаленной машиной, например, он может распечатать содержимое ее каталогов. Наконец, FTP выполняет аутентификацию пользователей. Прежде, чем получить доступ к файлу, в соответствии с протоколом пользователи должны сообщить свое имя и пароль. Для доступа к публичным каталогам FTP-архивов Internet парольная аутентификация не требуется, и ее обходят за счет использования для такого доступа предопределенного имени пользователя Anonymous. 
+                                </p>
+                                <p class="mb-0">
+                                  В стеке TCP/IP протокол FTP предлагает наиболее широкий набор услуг для работы с файлами, однако он является и самым сложным для программирования. Приложения, которым не требуются все возможности FTP, могут использовать другой, более экономичный протокол - простейший протокол пересылки файлов TFTP (Trivial File Transfer Protocol). Этот протокол реализует только передачу файлов, причем в качестве транспорта используется более простой, чем TCP, протокол без установления соединения - UDP.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="col-sm-4">
-                    <div class="card">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="img/telnet.jpg" alt="Card image cap">
                       <div class="card-body">
-                        <h5 class="card-title">Специальный заголовок</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+                        <button type="button" class="btn btn-primary  mx-auto d-block col-10" data-toggle="modal" data-target="#telnet">
+                          telnet
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="telnet" tabindex="-1" role="dialog" aria-labelledby="telnet" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="telnet ">telnet</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <p class="mb-0">
+                                  Протокол telnet обеспечивает передачу потока байтов между процессами, а также между процессом и терминалом. Наиболее часто этот протокол используется для эмуляции терминала удаленного компьютера. При использовании сервиса telnet пользователь фактически управляет удаленным компьютером так же, как и локальный пользователь, поэтому такой вид доступа требует хорошей защиты. Поэтому серверы telnet всегда используют как минимум аутентификацию по паролю, а иногда и более мощные средства защиты, например, систему Kerberos.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="col-sm-4">
-                    <div class="card">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="img/snmp.png" alt="Card image cap">
                       <div class="card-body">
-                        <h5 class="card-title">Специальный заголовок</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+                        <button type="button" class="btn btn-primary  mx-auto d-block col-10" data-toggle="modal" data-target="#snmp">
+                          SNMP
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="snmp" tabindex="-1" role="dialog" aria-labelledby="telnet" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="snmp ">SNMP (Simple Network Management Protocol)</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <p>
+                                  Протокол SNMP (Simple Network Management Protocol) используется для организации сетевого управления. Изначально протокол SNMP был разработан для удаленного контроля и управления маршрутизаторами Internet, которые традиционно часто называют также шлюзами. С ростом популярности протокол SNMP стали применять и для управления любым коммуникационным оборудованием - концентраторами, мостами, сетевыми адаптерами и т.д. и т.п. Проблема управления в протоколе SNMP разделяется на две задачи.
+                                </p>
+                                <p>
+                                  Первая задача связана с передачей информации. Протоколы передачи управляющей информации определяют процедуру взаимодействия SNMP-агента, работающего в управляемом оборудовании, и SNMP-монитора, работающего на компьютере администратора, который часто называют также консолью управления. Протоколы передачи определяют форматы сообщений, которыми обмениваются агенты и монитор.
+                                </p>
+                                <p class="mb-0">
+                                  Вторая задача связана с контролируемыми переменными, характеризующими состояние управляемого устройства. Стандарты регламентируют, какие данные должны сохраняться и накапливаться в устройствах, имена этих данных и синтаксис этих имен. В стандарте SNMP определена спецификация информационной базы данных управления сетью. Эта спецификация, известная как база данных MIB (Management Information Base), определяет те элементы данных, которые управляемое устройство должно сохранять, и допустимые операции над ними.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div> 
+              </div>
+              <button type="button" class="btn btn-primary mt-2 mx-auto col-11 bg-success" data-toggle="modal" data-target="#thirdModal">
+                Источник
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="thirdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Источник информации</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body text-center">
+                      <a href="https://www.opennet.ru/docs/RUS/ip_network/glava_2.html" class="text-break">https://www.opennet.ru/docs/RUS/ip_network/glava_2.html</a>
+                    </div>
+                  </div>
+                </div>
               </div> 
-            </div>   
+            </div>
+
+          </section>
+          <hr class="col-11 mx-auto">
+          <section>
+            <div class="row mx-auto">
+              <p class="lead d-block text-center col-12">
+                Работу выполнил Воробьёв Владислав (студент группы 201-321)
+              </p>
+              <div class="media mx-auto col-6">
+                <img src="img/politeh.jpg" width="5%" class="ml-5" alt="polikek">
+                <div class="media-body text-center">
+                  <p class="lead mt-0">Московский политехнический университет</p>
+                  2020 год. Все права защищены.
+                </div>
+              </div>
+            </div>
           </section>       
         </div>  
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
